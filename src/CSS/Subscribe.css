@@ -1,0 +1,106 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures footer stays at the bottom */
+}
+
+.subscribe-container {
+  flex: 1; /* Take all available space except for the footer */
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  /* background: #ffffff; */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.subscribe-container h2 {
+  color: #ff416c;
+  margin-bottom: 20px;
+}
+
+.subscribe-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe-container input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.subscribe-container button {
+  background: #ff416c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.subscribe-container button:hover {
+  background: #ff4b2b;
+}
+
+.footer-container {
+  background-color: #000; /* Set to pure black */
+  color: white; /* Ensure text is visible */
+  text-align: center;
+  padding: 10px 0; /* Adjust padding */
+  position: fixed;
+  bottom: 0; /* Stick to the very bottom */
+  left: 0;
+  width: 100%;
+  height: 150px; /* Set a fixed height */
+  line-height: 30px; /* Align text vertically */
+}
+
+
+.footer .brand h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.footer .brand span {
+  color: #ffcc00;
+}
+
+.footer h2 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-item a {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-item a:hover {
+  transform: scale(1.2);
+}
+
+.footer p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}

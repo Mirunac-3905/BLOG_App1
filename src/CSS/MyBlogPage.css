@@ -1,0 +1,143 @@
+.my-blog-container {
+    width: 80%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap; /* To allow wrapping of blog items to next line */
+    justify-content: space-between; /* To space out the items evenly */
+}
+
+.my-blog-heading {
+    text-align: center;
+    color: #ff416c;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure the heading spans full width */
+}
+
+.my-blog-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Ensure the blogs wrap into multiple rows */
+    gap: 20px; /* Space between the blog boxes */
+    justify-content: space-between;
+}
+
+.my-blog-item {
+    width: calc(33% - 20px); /* 3 items per row, adjust the width */
+    /* background: #f9f9f9; */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.my-blog-item:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+}
+
+.my-blog-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.my-blog-info {
+    font-size: 14px;
+    color: #666;
+    flex-grow: 1;
+  
+}
+
+.my-blog-theme {
+    font-size: 12px;
+    color: #777;
+}
+
+.my-blog-url {
+    color: #ff416c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.my-blog-url:hover {
+    text-decoration: underline;
+}
+
+.my-blog-button {
+    background: #ff416c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 100%;
+    text-align: center;
+}
+
+.my-blog-button:hover {
+    background: #ff4b2b;
+}
+
+.my-blog-button.delete {
+    background: #ff4b2b;
+}
+
+.my-blog-button.delete:hover {
+    background: #a71d2a;
+}
+
+.my-blog-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.my-blog-input,
+.my-blog-textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+
+.my-blog-button.save {
+    background: #28a745;
+}
+
+.my-blog-button.save:hover {
+    background: #1e7e34;
+}
+
+.my-blog-button.cancel {
+    background: #6c757d;
+}
+
+.my-blog-button.cancel:hover {
+    background: #545b62;
+}
+
+.no-blogs-message {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    width: 500px;
+}

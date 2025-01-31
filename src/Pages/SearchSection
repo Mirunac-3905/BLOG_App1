@@ -1,0 +1,59 @@
+import React, { useState } from 'react';
+import '../CSS/SearchSection.css';
+const SearchSection = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [category, setCategory] = useState('all');
+  const [posts, setPosts] = useState([]);
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch(`/api/search?query=${searchQuery}&category=${category}`);
+    const data = await response.json();
+    setPosts(data);
+  };
+
+  return (
+    <div className="search-section">
+      <h2>Find Your Next Read</h2>
+      <p>Search through our blog by topic or keyword:</p>
+
+      <form className="search-form" onSubmit={handleSearch}>
+        <input
+          type="text"
+          placeholder="Search..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <select
+          name="category"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          <option value="all">All Categories</option>
+          <option value="travel">Travel</option>
+          <option value="lifestyle">Lifestyle</option>
+          <option value="technology">Technology</option>
+          <option value="personal">Personal Stories</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+
+      <div className="search-results">
+        {posts.length === 0 ? (
+          <p>No posts found.</p>
+        ) : (
+          posts.map((post) => (
+            <div key={post._id} className="post-preview">
+              <h3>{post.title}</h3>
+              <p>{post.content.substring(0, 100)}...</p>
+              <a href={`/post/${post._id}`}>Read more</a>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default SearchSection;

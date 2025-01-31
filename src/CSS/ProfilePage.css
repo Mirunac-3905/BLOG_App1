@@ -1,0 +1,95 @@
+
+   .profile-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+   
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-heading {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+}
+
+.profile-details {
+    padding: 20px;
+}
+
+.profile-picture-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.upload-profile-picture {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bio-section, .social-media, .email-section {
+    margin-bottom: 10px;
+}
+
+input[type="url"], input[type="email"], input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #19a3ac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1ea3bd;
+}
+
+.edit-profile-button, .save-profile-button, .delete-profile-button, .logout-button {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+.success-message, .error-message {
+    color: green;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+}
+.saved-message {
+  color: green;
+  font-size: 14px;
+  margin-left: 10px;
+  font-weight: bold;
+}

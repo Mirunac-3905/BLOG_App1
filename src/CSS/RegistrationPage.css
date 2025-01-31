@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    /* background: url('https://img.freepik.com/premium-vector/abstract-background-with-blue-turquoise-waves_632473-9.jpg?semt=ais_incoming') no-repeat center center fixed; */
+    background-size: cover;
+}
+
+.register {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    width: 300px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.register h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.register label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.register input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.register button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #1e90ff, #00bfff);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.register button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #00bfff, #1e90ff);
+}
+
+.message {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ff416c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
